@@ -1,4 +1,4 @@
-/**
+/** 
  *defines the Controllers for each route of the SPA app
  * sets up the $scope and invokes the $http REST call
  * $scope is loaded w data which is then passed to the views

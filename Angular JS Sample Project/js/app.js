@@ -1,4 +1,4 @@
-/**
+/** 
  *defines the application
  * sets up the routes
  * sets up the partials, contollers and template URLs for each route
