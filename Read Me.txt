@@ -1,4 +1,4 @@
-BackBone JS Sample Project
+BackBone JS Sample Project 
 
 	This project illustrates a BackBone JS application.   
 
