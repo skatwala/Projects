@@ -36,3 +36,12 @@ Angular JS Sample Project
 		Chrome and IE implement the same domain policy and hence will require the built in REST Service along with this project running on a Web Server such as IIS, nGINX, Apache, Node JS, etc
 		
 		
+Jasmine
+
+	This is Jasmine's stand alone version 2.0
+	
+	Test cases for both the above projects are under development.  Sample test specs have been provided which can be executed via SpecRunner.js
+	
+	However actual Test Cases for the above 2 projects are under development
+		
+		
