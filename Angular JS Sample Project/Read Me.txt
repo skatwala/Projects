@@ -1,5 +1,5 @@
  
-Angular JS Sample Project
+Angular JS Sample Project 
 
 	This project illustrates an Angular JS application.  
 
