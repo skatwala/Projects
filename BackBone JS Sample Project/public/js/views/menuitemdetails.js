@@ -1,3 +1,9 @@
+/**
+ * This View renders a single Menu Item
+ * The associated pre compiled handlebars js template has a delete button
+ * This View has event binding and defintion for the delete button
+ * Saptarshi May 2014
+ */
 var MenuItemDetails = Backbone.View.extend({
 
 

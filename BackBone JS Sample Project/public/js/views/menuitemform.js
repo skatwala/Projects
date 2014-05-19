@@ -1,3 +1,10 @@
+/**
+ * This View if for the FORM to create a new Menu Item
+ * The associated pre compiled handlebars js template is a FORM
+ * that has a Save button.  
+ * This View has logic to read the form content and event binding and defintion for the Save button
+ * Saptarshi May 2014
+ */
 var MenuItemForm = Backbone.View.extend({
 
 

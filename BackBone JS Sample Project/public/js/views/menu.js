@@ -1,3 +1,9 @@
+/**
+ * This View renders Collection of menu items
+ * It listens to events for Collection content being added or deleted
+ * It refreshes the contents of the collection
+ * Saptarshi May 2014
+ */
 var MenuView = Backbone.View.extend({
 
 	initialize: function  () {
