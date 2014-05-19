@@ -1,3 +1,10 @@
+/**
+ *defines the Controllers for each route of the SPA app
+ * sets up the $scope and invokes the $http REST call
+ * $scope is loaded w data which is then passed to the views
+ * sets up forward/next navigation links depending on if data exists or not
+ * Saptarshi - May 2014
+ */
 var artistControllers = angular.module('artistControllers', ['ngAnimate']);
 
 artistControllers.controller('ListController', ['$scope', '$http', function($scope, $http) {
