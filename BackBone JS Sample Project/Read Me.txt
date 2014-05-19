@@ -16,6 +16,6 @@ BackBone JS Sample Project
 
 	Node Server will start at Port 3000
 
-	After this, enter http://localhost:3000 in your browser
+	After this, enter http://localhost:3000 in your browser 
 
  
