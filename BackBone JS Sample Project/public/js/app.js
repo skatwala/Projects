@@ -1,11 +1,3 @@
-/**
- * AppRouter defines the Routes
- * it initializes the Models and the Collections
- * gets the Models from the Collections for re-use wherever appropriate
- * passes Models and Collections to Views
- * Uses jQuery to start BackBone after page is loaded
- */
-
 var AppRouter = Backbone.Router.extend({
 	routes: {
 		"": "list",
@@ -15,7 +7,6 @@ var AppRouter = Backbone.Router.extend({
 
 	initialize: function  () {
 		this.menuItems = new MenuItems();
-		this.menuItems.fetch();
 
 		this.menuItemModel = new MenuItem();
 		this.menuItemView = new MenuItemDetails(

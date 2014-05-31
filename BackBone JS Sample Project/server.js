@@ -6,6 +6,10 @@ var app = express()
   .use(express.bodyParser())
   .use(express.static('public'));
 
+app.get('/', function (req, res) {
+  res.render('index.hbs', {data: JSON.stringify(items)});
+});
+
 app.get('/items', function  (req, res) {
   res.json(items);
 });
