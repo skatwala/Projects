@@ -1,0 +1,12 @@
+The "js" folder contains source files.  The "build" folder contains filesd after jsx command.
+
+Please execute the following commands 
+
+1  npm install --save httpster
+2  npm install --save react-tools
+3  npm start
+
+Now , open http://localhost:4321   The bulletin board app will opn up
+
+
+Click the upper right side "+" sign to create notes
