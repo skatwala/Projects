@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.4.7" src="http://code.angularjs.org/1.4.7/angular.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.14.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.1.js"></script>
+    <link data-require="bootstrap-css@*" data-semver="3.2.0" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="datepickerMultiSelect.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+   <body ng-controller='AppCtrl as app'>
+
+   <p>Date: <input data-select-on-click ng-model="app.dateValue" id="dateControl" ></p>
+<!--
+   <input type="button" value="app.focus" ng-click="app.focus()">
+   -->
+   <div ng-if="app.showDateRangeControl">
+
+   <table>
+      <tr>
+        <td>
+          <uib-datepicker ng-model='app.activeDate' multi-select='app.selectedDates' select-range='{{app.type=="range"}}'></uib-datepicker>
+        </td>
+        <td style='width:50px'>
+        </td>
+        <td>
+<!--
+          <div ng-if='app.type=="range"' >
+            Selected Range: 
+            <div class='well well-sm'>
+              {{(app.selectedDates | orderBy)[0] | date:"fullDate"}}
+              <span ng-if='app.selectedDates.length > 1'>
+                - {{(app.selectedDates | orderBy : '-')[0] | date:"fullDate"}}
+              </span>
+          	</div>
+        	</div>
+
+          <div  >
+            {{app.selectedDates[1]  | date:"fullDate"}}
+          </div>
+          <div ng-repeat="n in app.selectedDates track by $index">
+            {{n  | date:"fullDate"}}, {{$index}}
+          </div>
+-->
+        </td>
+      </tr>
+     
+    </table>
+   </div>
+  </body>
+
+</html>
