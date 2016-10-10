@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Off the backbone</title>
+
+	<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/lib/underscore-min.js"></script>
+	<script type="text/javascript" src="js/lib/backbone-min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/handlebars.runtime.js"></script>
+	<script type="text/javascript" src="templates/templates.js"></script>
+	<script type="text/javascript" src="js/models/menuitem.js"></script>
+	<script type="text/javascript" src="js/collections/menuitems.js"></script>
+	<script type="text/javascript" src="js/views/menu.js"></script>
+	<script type="text/javascript" src="js/views/menuitemform.js"></script>
+	<script type="text/javascript" src="js/views/menuitemdetails.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+		app.menuItems.reset({{{data}}});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
+</head>
+<body>
+
+	<div class="container">
+		<h1>Off the backbone</h1>
+
+		<ul class="nav nav-pills">
+			<li><a href="#">Food</a></li>
+			<li><a href="#/menu-items/new">Add Item</a></li>
+			<li><a href="#/menu-items/garden-salad">Garden Salad</a></li>
+		</ul>
+	</div>
+
+	<div class="container" id="app">
+
+	</div>
+
+</body>
+</html>
