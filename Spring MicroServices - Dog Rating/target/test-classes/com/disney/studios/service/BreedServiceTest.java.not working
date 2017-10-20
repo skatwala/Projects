@@ -1,0 +1,30 @@
+package com.disney.studies.service;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.disney.studios.domain.Breed;
+import com.disney.studios.repository.BreedRepository;
+
+ 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+public class BreedServiceTest {
+	@Autowired
+	    BreedRepository breedRepository;   
+
+	     
+	    @Test
+	    public void testBreedSave() {
+	    	breedRepository.save(new Breed("L", "Labrador"));
+	    	assertEquals(breedRepository.count(), 1);
+
+	    }
+
+
+}
