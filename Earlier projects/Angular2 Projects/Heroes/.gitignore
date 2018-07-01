@@ -1,8 +1,0 @@
-typings
-app/**/*.js
-app/**/*.map
-node_modules
-npm-debug.log
-jspm_packages
-bower_components
-.vimrc
