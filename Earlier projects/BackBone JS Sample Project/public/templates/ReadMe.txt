@@ -1,1 +1,0 @@
-These are pre-compiled HandleBars JS Templates - to be consumed by the View of BackBone
