@@ -1,14 +1,19 @@
 package com.example.university;
 
-import com.example.university.domain.*;
-import com.example.university.repo.CourseRepository;
-import com.example.university.repo.DepartmentRepository;
-import com.example.university.repo.StaffRepository;
-import com.example.university.repo.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.university.domain.Course;
+import com.example.university.domain.Department;
+import com.example.university.domain.Person;
+import com.example.university.domain.Staff;
+import com.example.university.domain.Student;
+import com.example.university.repo.CourseRepository;
+import com.example.university.repo.DepartmentRepository;
+import com.example.university.repo.StaffRepository;
+import com.example.university.repo.StudentRepository;
 
 /**
  * Main Spring Boot Class for the University Application.
@@ -16,6 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * -
  */
+ 
 @SpringBootApplication
 public class UniversityApplication implements CommandLineRunner{
 	@Autowired
@@ -33,6 +39,7 @@ public class UniversityApplication implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(UniversityApplication.class, args);
 	}
+	
 
     /**
      * Initialize the Database at application startup.
@@ -55,9 +62,6 @@ public class UniversityApplication implements CommandLineRunner{
 		Staff profBrown =   staffRepository.save(new Staff(new Person ("James", "Brown")));
 		Staff profMiller =   staffRepository.save(new Staff(new Person ("Judy", "Miller")));
 		Staff profDavis =   staffRepository.save(new Staff(new Person ("James", "Davis")));
-		Staff profMoore =   staffRepository.save(new Staff(new Person ("Allison", "Moore")));
-		Staff profThomas =   staffRepository.save(new Staff(new Person ("Tom", "Thomas")));
-		Staff profGreen =   staffRepository.save(new Staff(new Person ("Graham", "Green")));
 		Staff profWhite=   staffRepository.save(new Staff(new Person ("Whitney", "White")));
 		Staff profBlack =   staffRepository.save(new Staff(new Person ("Jack", "Black")));
 		Staff profKing =   staffRepository.save(new Staff(new Person ("Queen", "King")));
@@ -78,9 +82,7 @@ public class UniversityApplication implements CommandLineRunner{
 		Course chemistry = courseRepository.save(new Course("Chemistry",3, profDavis, naturalSciences));
 		Course physics = courseRepository.save(new Course("Physics",3, profDavis, naturalSciences));
 		courseRepository.save(physics.addPrerequisite(chemistry));
-		Course cProgramming = courseRepository.save(new Course("C Programming",3, profMoore, naturalSciences));
-		Course jProgramming = courseRepository.save(new Course("Java Programming",3, profMoore, naturalSciences));
-
+		 
 		//Social Science Courses
 		Course history101 = courseRepository.save(new Course("History 101",3, profMiller, socialSciences));
 		Course anthro = courseRepository.save(new Course("Anthropology ",3, profKing, socialSciences));
@@ -91,4 +93,11 @@ public class UniversityApplication implements CommandLineRunner{
 		courseRepository.save(psych.addPrerequisite(history101).addPrerequisite(english101));
 
 	}
+	
+	 /*@Bean
+	    ServletRegistrationBean h2servletRegistration(){
+	        ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
+	        registrationBean.addUrlMappings("/console/*");
+	        return registrationBean;
+	    }*/
 }

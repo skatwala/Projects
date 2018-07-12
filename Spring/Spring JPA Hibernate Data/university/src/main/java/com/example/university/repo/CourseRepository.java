@@ -1,16 +1,14 @@
 package com.example.university.repo;
 
-import com.example.university.domain.Staff;
-import com.example.university.domain.Student;
-import com.example.university.view.CourseView;
-import com.example.university.domain.Course;
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import java.util.List;
+import com.example.university.domain.Course;
 
 /**
  * DataSource Management for the Courses at the University.
@@ -28,10 +26,6 @@ public interface CourseRepository extends CrudRepository<Course,Integer>{
 
     @Query("Select c from Course c join c.prerequisites p where p.id = ?1")
     List<Course> findCourseByPrerequisite(int id);
-
-    @Query("Select new com.example.university.view.CourseView" +
-            "(c.name, c.instructor.member.lastName, c.department.name) from Course c where c.id=?1")
-    CourseView getCourseView(int courseId) ;
 
     List<Course> findByCredits(@Param("credits") int credits);
 

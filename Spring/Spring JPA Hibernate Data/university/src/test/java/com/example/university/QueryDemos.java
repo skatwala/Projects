@@ -119,10 +119,6 @@ public class QueryDemos {
         courseRepository.findCourseByPrerequisite(english101.getId())
                 .forEach(System.out::println);
 
-        //Select new com.example.university.view.CourseView
-        //  (c.name, c.instructor.member.lastName, c.department.name) from Course c where c.id=?1
-        System.out.println("\nCourseView for English 101 \n" +
-                courseRepository.getCourseView(english101.getId()));
     }
 
     /**
@@ -152,30 +148,7 @@ public class QueryDemos {
         members.forEach(System.out::println);
     }
 
-    /**
-     * Queries using Query by Example
-     *
-     * Departments persisted to H2 in-Memory database at startup.
-     * @see UniversityApplication
-     */
-    @Test
-    public void queryByExample() {
-        System.out.println("\nFind the Department with the name 'Humanities' \n" +
-                departmentRepository.findOne(Example.of(new Department("Humanities", null))));
-
-
-        System.out.println("\nFind Departments with the first name of the chair is 'John'");
-        departmentRepository.findAll(Example.of(
-                new Department(null, new Staff(new Person("John", null))))).forEach(System.out::println);
-
-        System.out.println("\nFind All Departments with the name ending in 'sciences', case insensitive");
-        departmentRepository.findAll(Example.of(new Department("sciences", null),
-                ExampleMatcher.matching().
-                        withIgnoreCase().
-                        withStringMatcher(ExampleMatcher.StringMatcher.ENDING))).forEach(System.out::println);
-
-    }
-
+    
 
     @Before
     @After
