@@ -1,4 +1,5 @@
 
+This working example illustrates Vue JS Forms Validation.   
 
 1	Download dependencies
 
