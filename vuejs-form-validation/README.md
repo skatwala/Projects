@@ -1,14 +1,14 @@
 
 
-DOwnload dependencies
+1	Download dependencies
 
 npm install
 
-Run the Application
+2	Run the Application
 
 yarn run dev
 
-Launch the URL
+3	Launch the URL
 
 localhost:8080
 ```
